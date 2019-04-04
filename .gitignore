@@ -1,33 +1,29 @@
-perating System Files
+HELP.md
+/target/
+!.mvn/wrapper/maven-wrapper.jar
 
-*.DS_Store
-Thumbs.db
-
-# Build Files #
-
-bin
-target
-build/
-.gradle
-
-# Eclipse Project Files #
-
+### STS ###
+.apt_generated
 .classpath
+.factorypath
 .project
 .settings
+.springBeans
+.sts4-cache
 
-# IntelliJ IDEA Files #
-
+### IntelliJ IDEA ###
+.idea
+*.iws
 *.iml
 *.ipr
-*.iws
-*.idea
 
-# Test files
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
 
-*-uploaded
-dependency-reduced-pom.xml
-README.html
- 
-upload-dir
-
+### VS Code ###
+.vscode/
