@@ -3,12 +3,9 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.security.SecureRandom;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.Arrays.asList;
@@ -19,8 +16,10 @@ import static java.util.stream.Collectors.*;
 public class DemoApplication {
 
     public static void main(String[] args) {
-//		SpringApplicatiIon.run(DemoApplication.class, args);
+		SpringApplication.run(DemoApplication.class, args);
+    }
 
+    private static void streams() {
         System.out.println();
 
         var people = createPeople();
@@ -87,7 +86,6 @@ public class DemoApplication {
         people.stream()
                 .sorted(comparing(Person::getAge).thenComparing(Person::getName))
                 .forEach(System.out::println);
-
     }
 
     private static Integer[] createNumbers() {
