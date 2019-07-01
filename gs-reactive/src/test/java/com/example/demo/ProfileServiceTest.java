@@ -56,6 +56,7 @@ class ProfileServiceTest {
         Mono<Profile> deleted = this.profileService
                 .create(test)
                 .flatMap(saved -> this.profileService.delete(saved.getId()));
+
         StepVerifier
                 .create(deleted)
                 .expectNextMatches(profile -> profile.getEmail().equalsIgnoreCase(test))
